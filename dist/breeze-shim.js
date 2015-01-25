@@ -1,4 +1,4 @@
-System.register(["q", "jquery", "breeze.js"], function (_export) {
+System.register(["q", "jquery", "breeze-client"], function (_export) {
   "use strict";
 
   var Q, jQuery, breeze;
@@ -7,8 +7,8 @@ System.register(["q", "jquery", "breeze.js"], function (_export) {
       Q = _q["default"];
     }, function (_jquery) {
       jQuery = _jquery["default"];
-    }, function (_breezeJs) {
-      breeze = _breezeJs["default"];
+    }, function (_breezeClient) {
+      breeze = _breezeClient["default"];
     }],
     execute: function () {
       breeze.config.setQ(Q);
