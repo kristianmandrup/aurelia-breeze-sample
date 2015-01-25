@@ -1,33 +1,43 @@
-System.register([], function (_export) {
+System.register(["aurelia-router", "./github-repos"], function (_export) {
   "use strict";
 
-  var _prototypeProperties, Welcome, UpperValueConverter;
+  var Router, GitHubRepos, _prototypeProperties, Repositories, UpperValueConverter;
   return {
-    setters: [],
+    setters: [function (_aureliaRouter) {
+      Router = _aureliaRouter.Router;
+    }, function (_githubRepos) {
+      GitHubRepos = _githubRepos.GitHubRepos;
+    }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
         if (staticProps) Object.defineProperties(child, staticProps);
         if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
       };
 
-      Welcome = (function () {
-        function Welcome() {
-          this.heading = "Welcome to the Aurelia Navigation App!";
-          this.firstName = "John";
-          this.lastName = "Doe";
+      Repositories = (function () {
+        function Repositories(router, github) {
+          this.router = router;
+
+          router.configure(function (config) {
+            config.map([{ route: ["", ":id"], moduleId: "repo" }]);
+          });
+
+          this.github = github;
         }
 
-        _prototypeProperties(Welcome, null, {
-          fullName: {
-            get: function () {
-              return "" + this.firstName + " " + this.lastName;
+        _prototypeProperties(Repositories, {
+          inject: {
+            value: function inject() {
+              return [Router, GitHubRepos];
             },
+            writable: true,
             enumerable: true,
             configurable: true
-          },
-          welcome: {
-            value: function welcome() {
-              alert("Welcome, " + this.fullName + "!");
+          }
+        }, {
+          activate: {
+            value: function activate() {
+              return this.github.ready;
             },
             writable: true,
             enumerable: true,
@@ -35,9 +45,9 @@ System.register([], function (_export) {
           }
         });
 
-        return Welcome;
+        return Repositories;
       })();
-      _export("Welcome", Welcome);
+      _export("Repositories", Repositories);
 
       UpperValueConverter = (function () {
         function UpperValueConverter() {}

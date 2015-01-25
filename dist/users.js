@@ -1,7 +1,7 @@
 System.register(["aurelia-http-client"], function (_export) {
   "use strict";
 
-  var HttpClient, _prototypeProperties, url, Flickr;
+  var HttpClient, _prototypeProperties, url, Users;
   return {
     setters: [function (_aureliaHttpClient) {
       HttpClient = _aureliaHttpClient.HttpClient;
@@ -13,14 +13,14 @@ System.register(["aurelia-http-client"], function (_export) {
       };
 
       url = "http://api.flickr.com/services/feeds/photos_public.gne?tags=rainier&tagmode=any&format=json";
-      Flickr = (function () {
-        function Flickr(http) {
+      Users = (function () {
+        function Users(http) {
           this.heading = "Flickr";
           this.images = [];
           this.http = http;
         }
 
-        _prototypeProperties(Flickr, {
+        _prototypeProperties(Users, {
           inject: {
             value: function inject() {
               return [HttpClient];
@@ -51,9 +51,9 @@ System.register(["aurelia-http-client"], function (_export) {
           }
         });
 
-        return Flickr;
+        return Users;
       })();
-      _export("Flickr", Flickr);
+      _export("Users", Users);
     }
   };
 });

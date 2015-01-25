@@ -1,0 +1,12 @@
+<template>
+  <form role="form"><!-- submit.delegate="submit()">-->
+    <div repeat.for="property of dataProperties" class="form-group">
+      <label for.bind="property.name">${property.name}</label>
+      <input type="text" 
+             id.bind="property.name"
+             placeholder.bind="'Enter ' + property.name" />
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</template>

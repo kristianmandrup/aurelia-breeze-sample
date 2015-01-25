@@ -2,7 +2,7 @@ import {HttpClient} from 'aurelia-http-client';
 
 var url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=rainier&tagmode=any&format=json';
 
-export class Flickr{
+export class Users {
   static inject() { return [HttpClient]; }
 	constructor(http){
 		this.heading = 'Flickr';
