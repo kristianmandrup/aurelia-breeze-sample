@@ -17,6 +17,7 @@ System.config({
     "font-awesome": "npm:font-awesome@4.2.0",
     "jquery": "github:components/jquery@2.1.3",
     "q": "npm:q@2.0.2",
+    "vague-time": "npm:vague-time@1.2.0",
     "github:aurelia/binding@0.3.2": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.4.1",
       "aurelia-metadata": "github:aurelia/metadata@0.3.0",
@@ -109,6 +110,9 @@ System.config({
       "assert": "npm:assert@1.3.0",
       "fs": "github:jspm/nodelibs-fs@0.1.0"
     },
+    "github:jspm/nodelibs-path@0.1.0": {
+      "path-browserify": "npm:path-browserify@0.0.0"
+    },
     "github:jspm/nodelibs-process@0.1.0": {
       "process": "npm:process@0.10.0"
     },
@@ -141,6 +145,9 @@ System.config({
     "npm:jquery@2.1.3": {
       "process": "github:jspm/nodelibs-process@0.1.0"
     },
+    "npm:path-browserify@0.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.0"
+    },
     "npm:q@2.0.2": {
       "asap": "npm:asap@1.0.0",
       "collections": "npm:collections@2.0.1",
@@ -149,6 +156,11 @@ System.config({
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.0"
+    },
+    "npm:vague-time@1.2.0": {
+      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.0"
     }
   }

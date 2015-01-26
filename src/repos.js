@@ -20,9 +20,3 @@ export class Repositories {
     return this.github.ready;
   }
 }
-
-export class UpperValueConverter {
-  toView(value){
-    return value && value.toUpperCase();
-  }
-}

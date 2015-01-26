@@ -1,7 +1,7 @@
 System.register(["aurelia-router", "./github-repos"], function (_export) {
   "use strict";
 
-  var Router, GitHubRepos, _prototypeProperties, Repositories, UpperValueConverter;
+  var Router, GitHubRepos, _prototypeProperties, Repositories;
   return {
     setters: [function (_aureliaRouter) {
       Router = _aureliaRouter.Router;
@@ -48,24 +48,6 @@ System.register(["aurelia-router", "./github-repos"], function (_export) {
         return Repositories;
       })();
       _export("Repositories", Repositories);
-
-      UpperValueConverter = (function () {
-        function UpperValueConverter() {}
-
-        _prototypeProperties(UpperValueConverter, null, {
-          toView: {
-            value: function toView(value) {
-              return value && value.toUpperCase();
-            },
-            writable: true,
-            enumerable: true,
-            configurable: true
-          }
-        });
-
-        return UpperValueConverter;
-      })();
-      _export("UpperValueConverter", UpperValueConverter);
     }
   };
 });
