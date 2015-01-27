@@ -1,0 +1,23 @@
+<template>
+  <import from='../fuzzy'></import>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-5">
+        <div class="list-group">
+          <a repeat.for="member of aureliaMembers.members"
+             href.bind="'#members/' + member.login"
+             class="list-group-item">
+              <img src.bind="member.avatar_url" class="member-thumbnail" alt="avatar">                           
+              <strong>${member.login}</strong>
+              <!-- <p><small>${repo.description}<br/><span class="text-muted">Last Updated:  ${repo.updated_at | fuzzy }</span></small></p> -->
+          </a>
+        </div>
+      </div>
+
+      <router-view class="col-sm-7"></router-view>
+   
+    </div>
+  </div>
+</template>

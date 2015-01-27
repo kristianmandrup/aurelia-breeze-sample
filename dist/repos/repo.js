@@ -1,10 +1,10 @@
-System.register(["./github-repos"], function (_export) {
+System.register(["./aurelia-repos"], function (_export) {
   "use strict";
 
-  var GitHubRepos, _prototypeProperties, Repository;
+  var AureliaRepos, _prototypeProperties, Repository;
   return {
-    setters: [function (_githubRepos) {
-      GitHubRepos = _githubRepos.GitHubRepos;
+    setters: [function (_aureliaRepos) {
+      AureliaRepos = _aureliaRepos.AureliaRepos;
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -13,15 +13,15 @@ System.register(["./github-repos"], function (_export) {
       };
 
       Repository = (function () {
-        function Repository(github) {
-          this.github = github;
+        function Repository(aureliaRepos) {
+          this.aureliaRepos = aureliaRepos;
           this.repo = null;
         }
 
         _prototypeProperties(Repository, {
           inject: {
             value: function inject() {
-              return [GitHubRepos];
+              return [AureliaRepos];
             },
             writable: true,
             enumerable: true,
@@ -39,11 +39,11 @@ System.register(["./github-repos"], function (_export) {
           activate: {
             value: function activate(routeInfo) {
               if (routeInfo.id) {
-                this.repo = this.github.repos.find(function (r) {
+                this.repo = this.aureliaRepos.repos.find(function (r) {
                   return r.name === routeInfo.id;
                 });
               } else {
-                this.repo = this.github.repos[0];
+                this.repo = this.aureliaRepos.repos[0];
               }
             },
             writable: true,

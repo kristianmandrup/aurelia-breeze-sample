@@ -1,14 +1,12 @@
 <template>
-  <import from='./fuzzy'></import>
+  <import from='../fuzzy'></import>
 
 	<div class="container">
-		<h2>Aurelia Platform Repositories</h2>
-
     <div class="row">
 
       <div class="col-sm-5">
         <div class="list-group">
-          <a repeat.for="repo of github.repos"
+          <a repeat.for="repo of aureliaRepos.repos"
              href.bind="'#repos/' + repo.name"
              class="list-group-item">
               <span class="badge">
@@ -20,7 +18,7 @@
                 ${repo.watchers_count}
               </span>-->
               <strong>${repo.name}</strong>
-              <p><small>${repo.description}<br/><span class="text-muted">Last Updated:  ${repo.updated_at | fuzzy}</span></small></p>
+              <p><small>${repo.description}<br/><span class="text-muted">Last Updated:  ${repo.updated_at | fuzzy }</span></small></p>
           </a>
         </div>
       </div>

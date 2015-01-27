@@ -1,7 +1,8 @@
-System.register(["./breeze-shim", "./github"], function (_export) {
+System.register(["../breeze-shim", "../github"], function (_export) {
   "use strict";
 
-  var breeze, createEntityManager, GitHubRepos;
+  var breeze, createEntityManager, AureliaRepos;
+
 
 
   function stringComparisonOrdinalIgnoreCase(a, b) {
@@ -13,8 +14,6 @@ System.register(["./breeze-shim", "./github"], function (_export) {
     if (a > b) return 1;
     return 0;
   }
-
-
   return {
     setters: [function (_breezeShim) {
       breeze = _breezeShim["default"];
@@ -22,7 +21,7 @@ System.register(["./breeze-shim", "./github"], function (_export) {
       createEntityManager = _github.createEntityManager;
     }],
     execute: function () {
-      GitHubRepos = function GitHubRepos() {
+      AureliaRepos = function AureliaRepos() {
         var _this = this;
         var entityManager = createEntityManager(),
             query = breeze.EntityQuery.from("orgs/aurelia/repos").toType("Repository");
@@ -36,7 +35,7 @@ System.register(["./breeze-shim", "./github"], function (_export) {
         });
       };
 
-      _export("GitHubRepos", GitHubRepos);
+      _export("AureliaRepos", AureliaRepos);
     }
   };
 });

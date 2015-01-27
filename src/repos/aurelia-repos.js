@@ -1,7 +1,7 @@
-import breeze from './breeze-shim';
-import {createEntityManager} from './github';
+import breeze from '../breeze-shim';
+import {createEntityManager} from '../github';
 
-export class GitHubRepos {
+export class AureliaRepos {
   constructor() {
     var entityManager = createEntityManager(),
         query = breeze.EntityQuery.from('orgs/aurelia/repos').toType('Repository');
@@ -14,6 +14,7 @@ export class GitHubRepos {
       });
   }
 }
+
 
 function stringComparisonOrdinalIgnoreCase(a, b) {
     if (a === null)
@@ -28,6 +29,3 @@ function stringComparisonOrdinalIgnoreCase(a, b) {
         return 1;
     return 0;
 }
-
-
-//'orgs/aurelia/members'

@@ -11,9 +11,23 @@ var dataService = new breeze.DataService({
     shortName: 'Member',
 
     dataProperties: {
-      id:          { dataType: breeze.DataType.Int64, isPartOfKey: true },
-      login:       { /* string type by default */ },
-      html_url:    { }
+      id: { dataType: breeze.DataType.Int64, isPartOfKey: true },
+      login: { /* string type by default */ },
+      avatar_url: { },
+      //gravatar_id: ,
+      url: { },
+      html_url: { },
+      followers_url: { },
+      following_url: { },
+      gists_url: { },
+      starred_url: { },
+      subscriptions_url: { },
+      organizations_url: { },
+      repos_url: { },
+      events_url: { },
+      received_events_url: { },
+      type: { },
+      site_admin:  { dataType: breeze.DataType.Boolean }
     }  
   },
 
@@ -87,8 +101,3 @@ entityManager.metadataStore.addEntityType(repositoryType);
 export function createEntityManager() {
   return entityManager.createEmptyCopy();
 }
-
-
-//GET /repos/:owner/:repo
-//The parent and source objects are present when the repository is a fork. parent is the repository this repository was forked from, source is the ultimate source for the network.
-

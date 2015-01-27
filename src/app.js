@@ -7,8 +7,8 @@ export class App {
     this.router.configure(config => {
       config.title = 'Aurelia';
       config.map([
-        { route: ['','repos'], moduleId: 'repos', nav: true, title: 'Repositories' },
-        { route: 'users', moduleId: 'users', nav: true, title: 'Users' },
+        { route: ['','repos'], moduleId: 'repos/repos', nav: true, title: 'Repositories' },
+        { route: 'members', moduleId: 'members/members', nav: true, title: 'Members' },
       ]);
     });
   }

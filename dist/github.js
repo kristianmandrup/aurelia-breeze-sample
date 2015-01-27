@@ -7,8 +7,6 @@ System.register(["./breeze-shim"], function (_export) {
   function createEntityManager() {
     return entityManager.createEmptyCopy();
   }
-
-
   return {
     setters: [function (_breezeShim) {
       breeze = _breezeShim["default"];
@@ -25,7 +23,20 @@ System.register(["./breeze-shim"], function (_export) {
         dataProperties: {
           id: { dataType: breeze.DataType.Int64, isPartOfKey: true },
           login: {},
-          html_url: {}
+          avatar_url: {},
+          url: {},
+          html_url: {},
+          followers_url: {},
+          following_url: {},
+          gists_url: {},
+          starred_url: {},
+          subscriptions_url: {},
+          organizations_url: {},
+          repos_url: {},
+          events_url: {},
+          received_events_url: {},
+          type: {},
+          site_admin: { dataType: breeze.DataType.Boolean }
         }
       };
       memberType = new breeze.EntityType(memberTypeConfig);

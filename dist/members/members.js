@@ -1,12 +1,12 @@
-System.register(["aurelia-router", "./github-repos"], function (_export) {
+System.register(["aurelia-router", "./aurelia-members"], function (_export) {
   "use strict";
 
-  var Router, GitHubRepos, _prototypeProperties, Repositories;
+  var Router, AureliaMembers, _prototypeProperties, Members;
   return {
     setters: [function (_aureliaRouter) {
       Router = _aureliaRouter.Router;
-    }, function (_githubRepos) {
-      GitHubRepos = _githubRepos.GitHubRepos;
+    }, function (_aureliaMembers) {
+      AureliaMembers = _aureliaMembers.AureliaMembers;
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -14,21 +14,21 @@ System.register(["aurelia-router", "./github-repos"], function (_export) {
         if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
       };
 
-      Repositories = (function () {
-        function Repositories(router, github) {
+      Members = (function () {
+        function Members(router, aureliaMembers) {
           this.router = router;
 
           router.configure(function (config) {
-            config.map([{ route: ["", ":id"], moduleId: "repo" }]);
+            config.map([{ route: ["", ":id"], moduleId: "members/member" }]);
           });
 
-          this.github = github;
+          this.aureliaMembers = aureliaMembers;
         }
 
-        _prototypeProperties(Repositories, {
+        _prototypeProperties(Members, {
           inject: {
             value: function inject() {
-              return [Router, GitHubRepos];
+              return [Router, AureliaMembers];
             },
             writable: true,
             enumerable: true,
@@ -37,7 +37,7 @@ System.register(["aurelia-router", "./github-repos"], function (_export) {
         }, {
           activate: {
             value: function activate() {
-              return this.github.ready;
+              return this.aureliaMembers.ready;
             },
             writable: true,
             enumerable: true,
@@ -45,9 +45,9 @@ System.register(["aurelia-router", "./github-repos"], function (_export) {
           }
         });
 
-        return Repositories;
+        return Members;
       })();
-      _export("Repositories", Repositories);
+      _export("Members", Members);
     }
   };
 });
