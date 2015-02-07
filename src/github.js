@@ -62,9 +62,9 @@ var dataService = new breeze.DataService({
       has_wiki: { dataType: breeze.DataType.Boolean },
       has_pages: { dataType: breeze.DataType.Boolean },
       has_downloads: { dataType: breeze.DataType.Boolean },
-      pushed_at: { dataType: breeze.DataType.Boolean },
-      created_at: { dataType: breeze.DataType.Boolean },
-      updated_at: { dataType: breeze.DataType.Boolean },
+      pushed_at: { dataType: breeze.DataType.DateTime },
+      created_at: { dataType: breeze.DataType.DateTime },
+      updated_at: { dataType: breeze.DataType.DateTime },
       // owner: {
       //   login: octocat,
       //   id: 1,
