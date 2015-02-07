@@ -1,4 +1,4 @@
-import breeze from './breeze-shim';
+import breeze from 'breeze-client';
 
 var dataService = new breeze.DataService({
       serviceName: 'https://api.github.com/',

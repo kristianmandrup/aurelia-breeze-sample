@@ -1,10 +1,10 @@
-System.register(["../breeze-shim", "../github"], function (_export) {
+System.register(["breeze-client", "../github"], function (_export) {
   "use strict";
 
   var breeze, createEntityManager, AureliaMembers;
   return {
-    setters: [function (_breezeShim) {
-      breeze = _breezeShim["default"];
+    setters: [function (_breezeClient) {
+      breeze = _breezeClient["default"];
     }, function (_github) {
       createEntityManager = _github.createEntityManager;
     }],

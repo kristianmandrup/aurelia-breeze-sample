@@ -1,4 +1,4 @@
-System.register(["./breeze-shim"], function (_export) {
+System.register(["breeze-client"], function (_export) {
   "use strict";
 
   var breeze, dataService, entityManager, memberTypeConfig, memberType, repositoryTypeConfig, repositoryType;
@@ -8,8 +8,8 @@ System.register(["./breeze-shim"], function (_export) {
     return entityManager.createEmptyCopy();
   }
   return {
-    setters: [function (_breezeShim) {
-      breeze = _breezeShim["default"];
+    setters: [function (_breezeClient) {
+      breeze = _breezeClient["default"];
     }],
     execute: function () {
       dataService = new breeze.DataService({

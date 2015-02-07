@@ -1,4 +1,4 @@
-import breeze from '../breeze-shim';
+import breeze from 'breeze-client';
 import {createEntityManager} from '../github';
 
 export class AureliaRepos {
