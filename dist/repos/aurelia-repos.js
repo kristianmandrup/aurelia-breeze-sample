@@ -1,4 +1,4 @@
-System.register(["breeze-client", "../github"], function (_export) {
+System.register(["breeze", "../github"], function (_export) {
   "use strict";
 
   var breeze, createEntityManager, AureliaRepos;
@@ -15,8 +15,8 @@ System.register(["breeze-client", "../github"], function (_export) {
     return 0;
   }
   return {
-    setters: [function (_breezeClient) {
-      breeze = _breezeClient["default"];
+    setters: [function (_breeze) {
+      breeze = _breeze["default"];
     }, function (_github) {
       createEntityManager = _github.createEntityManager;
     }],

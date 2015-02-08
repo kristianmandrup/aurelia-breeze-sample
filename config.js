@@ -12,7 +12,7 @@ System.config({
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.9.3",
     "aurelia-breeze": "github:jdanyow/aurelia-breeze@master",
     "bootstrap": "github:twbs/bootstrap@3.3.2",
-    "breeze-client": "npm:breeze-client@1.5.4",
+    "breeze": "npm:breeze-client@1.5.4",
     "font-awesome": "npm:font-awesome@4.3.0",
     "vague-time": "npm:vague-time@1.2.0",
     "github:aurelia/binding@0.3.4": {
@@ -102,7 +102,7 @@ System.config({
     "github:jdanyow/aurelia-breeze@master": {
       "aurelia-binding": "github:aurelia/binding@0.3.4",
       "aurelia-http-client": "github:aurelia/http-client@0.4.4",
-      "breeze-client": "npm:breeze-client@1.5.4"
+      "breeze": "npm:breeze-client@1.5.4"
     },
     "github:jspm/nodelibs-path@0.1.0": {
       "path-browserify": "npm:path-browserify@0.0.0"
@@ -113,9 +113,6 @@ System.config({
     "github:twbs/bootstrap@3.3.2": {
       "css": "github:systemjs/plugin-css@0.1.0",
       "jquery": "github:components/jquery@2.1.3"
-    },
-    "npm:breeze-client@1.5.4": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:core-js@0.4.10": {
       "process": "github:jspm/nodelibs-process@0.1.1"

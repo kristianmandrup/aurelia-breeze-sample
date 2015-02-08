@@ -1,4 +1,4 @@
-System.register(["breeze-client"], function (_export) {
+System.register(["breeze"], function (_export) {
   "use strict";
 
   var breeze, dataService, entityManager, memberTypeConfig, memberType, repositoryTypeConfig, repositoryType;
@@ -8,8 +8,8 @@ System.register(["breeze-client"], function (_export) {
     return entityManager.createEmptyCopy();
   }
   return {
-    setters: [function (_breezeClient) {
-      breeze = _breezeClient["default"];
+    setters: [function (_breeze) {
+      breeze = _breeze["default"];
     }],
     execute: function () {
       dataService = new breeze.DataService({
