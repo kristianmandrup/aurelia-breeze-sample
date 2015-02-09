@@ -1,6 +1,6 @@
 # aurelia-breeze-sample
 
-This sample app demonstrates [Aurelia](http://www.aurelia.io/) and [Breeze](http://www.getbreezenow.com/) integration using the [aurelia-breeze](https://github.com/jdanyow/aurelia-breeze) plugin.  It sets up a simple navigation-style app that pulls data from the GitHub API using Breeze.
+This sample app demonstrates [Aurelia](http://www.aurelia.io/) and [Breeze](http://www.getbreezenow.com/) integration using the [aurelia-breeze](https://github.com/jdanyow/aurelia-breeze) plugin.  It sets up a simple navigation-style app that pulls data from the GitHub API using Breeze.  Also included is a simple data-form component built with Aurelia.  When data-bound to a Breeze entity it generates it's fields automatically based on the entity's type information.
 
 ## Running The App
 
