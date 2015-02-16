@@ -1,7 +1,7 @@
 System.register(["breeze", "../github"], function (_export) {
   "use strict";
 
-  var breeze, createEntityManager, AureliaRepos;
+  var breeze, createEntityManager, _classCallCheck, AureliaRepos;
 
 
 
@@ -10,9 +10,11 @@ System.register(["breeze", "../github"], function (_export) {
     if (b === null) b = "";
     a = a.toLowerCase();
     b = b.toLowerCase();
-    if (a < b) return -1;
-    if (a > b) return 1;
-    return 0;
+    if (a < b) {
+      return -1;
+    }if (a > b) {
+      return 1;
+    }return 0;
   }
   return {
     setters: [function (_breeze) {
@@ -21,8 +23,12 @@ System.register(["breeze", "../github"], function (_export) {
       createEntityManager = _github.createEntityManager;
     }],
     execute: function () {
-      AureliaRepos = function AureliaRepos() {
+      _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
+      AureliaRepos = _export("AureliaRepos", function AureliaRepos() {
         var _this = this;
+        _classCallCheck(this, AureliaRepos);
+
         var entityManager = createEntityManager(),
             query = breeze.EntityQuery.from("orgs/aurelia/repos").toType("Repository");
 
@@ -33,9 +39,7 @@ System.register(["breeze", "../github"], function (_export) {
             return b.stargazers_count - a.stargazers_count;
           });
         });
-      };
-
-      _export("AureliaRepos", AureliaRepos);
+      });
     }
   };
 });

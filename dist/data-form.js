@@ -1,19 +1,20 @@
 System.register(["aurelia-framework"], function (_export) {
   "use strict";
 
-  var Behavior, _prototypeProperties, DataForm;
+  var Behavior, _prototypeProperties, _classCallCheck, DataForm;
   return {
     setters: [function (_aureliaFramework) {
       Behavior = _aureliaFramework.Behavior;
     }],
     execute: function () {
-      _prototypeProperties = function (child, staticProps, instanceProps) {
-        if (staticProps) Object.defineProperties(child, staticProps);
-        if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
-      };
+      _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
 
-      DataForm = (function () {
+      _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
+      DataForm = _export("DataForm", (function () {
         function DataForm() {
+          _classCallCheck(this, DataForm);
+
           this.dataProperties = [];
         }
 
@@ -23,7 +24,6 @@ System.register(["aurelia-framework"], function (_export) {
               return Behavior.withProperty("entity", "entityChanged");
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         }, {
@@ -38,14 +38,12 @@ System.register(["aurelia-framework"], function (_export) {
               }
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         });
 
         return DataForm;
-      })();
-      _export("DataForm", DataForm);
+      })());
     }
   };
 });

@@ -1,7 +1,7 @@
 System.register(["aurelia-router", "./aurelia-members"], function (_export) {
   "use strict";
 
-  var Router, AureliaMembers, _prototypeProperties, Members;
+  var Router, AureliaMembers, _prototypeProperties, _classCallCheck, Members;
   return {
     setters: [function (_aureliaRouter) {
       Router = _aureliaRouter.Router;
@@ -9,13 +9,14 @@ System.register(["aurelia-router", "./aurelia-members"], function (_export) {
       AureliaMembers = _aureliaMembers.AureliaMembers;
     }],
     execute: function () {
-      _prototypeProperties = function (child, staticProps, instanceProps) {
-        if (staticProps) Object.defineProperties(child, staticProps);
-        if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
-      };
+      _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
 
-      Members = (function () {
+      _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
+      Members = _export("Members", (function () {
         function Members(router, aureliaMembers) {
+          _classCallCheck(this, Members);
+
           this.router = router;
 
           router.configure(function (config) {
@@ -31,7 +32,6 @@ System.register(["aurelia-router", "./aurelia-members"], function (_export) {
               return [Router, AureliaMembers];
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         }, {
@@ -40,14 +40,12 @@ System.register(["aurelia-router", "./aurelia-members"], function (_export) {
               return this.aureliaMembers.ready;
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         });
 
         return Members;
-      })();
-      _export("Members", Members);
+      })());
     }
   };
 });

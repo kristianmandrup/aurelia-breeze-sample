@@ -1,19 +1,20 @@
 System.register(["./aurelia-members"], function (_export) {
   "use strict";
 
-  var AureliaMembers, _prototypeProperties, Member;
+  var AureliaMembers, _prototypeProperties, _classCallCheck, Member;
   return {
     setters: [function (_aureliaMembers) {
       AureliaMembers = _aureliaMembers.AureliaMembers;
     }],
     execute: function () {
-      _prototypeProperties = function (child, staticProps, instanceProps) {
-        if (staticProps) Object.defineProperties(child, staticProps);
-        if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
-      };
+      _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
 
-      Member = (function () {
+      _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
+      Member = _export("Member", (function () {
         function Member(aureliaMembers) {
+          _classCallCheck(this, Member);
+
           this.aureliaMembers = aureliaMembers;
           this.member = null;
         }
@@ -24,7 +25,6 @@ System.register(["./aurelia-members"], function (_export) {
               return [AureliaMembers];
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         }, {
@@ -33,7 +33,6 @@ System.register(["./aurelia-members"], function (_export) {
               alert("you submitted");
             },
             writable: true,
-            enumerable: true,
             configurable: true
           },
           activate: {
@@ -47,14 +46,12 @@ System.register(["./aurelia-members"], function (_export) {
               }
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         });
 
         return Member;
-      })();
-      _export("Member", Member);
+      })());
     }
   };
 });

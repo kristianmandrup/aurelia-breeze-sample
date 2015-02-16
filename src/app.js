@@ -1,4 +1,5 @@
 import {Router} from 'aurelia-router';
+import test from 'breeze/adapters/breeze.ajax.jQuery';
 
 export class App {
   static inject() { return [Router]; }

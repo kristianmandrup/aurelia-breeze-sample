@@ -1,19 +1,22 @@
-System.register(["aurelia-router"], function (_export) {
+System.register(["aurelia-router", "breeze/adapters/breeze.ajax.jQuery"], function (_export) {
   "use strict";
 
-  var Router, _prototypeProperties, App;
+  var Router, test, _prototypeProperties, _classCallCheck, App;
   return {
     setters: [function (_aureliaRouter) {
       Router = _aureliaRouter.Router;
+    }, function (_breezeAdaptersBreezeAjaxJQuery) {
+      test = _breezeAdaptersBreezeAjaxJQuery["default"];
     }],
     execute: function () {
-      _prototypeProperties = function (child, staticProps, instanceProps) {
-        if (staticProps) Object.defineProperties(child, staticProps);
-        if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
-      };
+      _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
 
-      App = (function () {
+      _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
+      App = _export("App", (function () {
         function App(router) {
+          _classCallCheck(this, App);
+
           this.router = router;
           this.router.configure(function (config) {
             config.title = "Aurelia";
@@ -27,14 +30,12 @@ System.register(["aurelia-router"], function (_export) {
               return [Router];
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         });
 
         return App;
-      })();
-      _export("App", App);
+      })());
     }
   };
 });

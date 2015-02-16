@@ -1,19 +1,20 @@
 System.register(["./aurelia-repos"], function (_export) {
   "use strict";
 
-  var AureliaRepos, _prototypeProperties, Repository;
+  var AureliaRepos, _prototypeProperties, _classCallCheck, Repository;
   return {
     setters: [function (_aureliaRepos) {
       AureliaRepos = _aureliaRepos.AureliaRepos;
     }],
     execute: function () {
-      _prototypeProperties = function (child, staticProps, instanceProps) {
-        if (staticProps) Object.defineProperties(child, staticProps);
-        if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
-      };
+      _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
 
-      Repository = (function () {
+      _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
+      Repository = _export("Repository", (function () {
         function Repository(aureliaRepos) {
+          _classCallCheck(this, Repository);
+
           this.aureliaRepos = aureliaRepos;
           this.repo = null;
         }
@@ -24,7 +25,6 @@ System.register(["./aurelia-repos"], function (_export) {
               return [AureliaRepos];
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         }, {
@@ -33,7 +33,6 @@ System.register(["./aurelia-repos"], function (_export) {
               alert("you submitted");
             },
             writable: true,
-            enumerable: true,
             configurable: true
           },
           activate: {
@@ -47,14 +46,12 @@ System.register(["./aurelia-repos"], function (_export) {
               }
             },
             writable: true,
-            enumerable: true,
             configurable: true
           }
         });
 
         return Repository;
-      })();
-      _export("Repository", Repository);
+      })());
     }
   };
 });
