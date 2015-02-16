@@ -1,6 +1,7 @@
 import {LogManager} from 'aurelia-framework';
 import {ConsoleAppender} from 'aurelia-logging-console';
 
+
 LogManager.addAppender(new ConsoleAppender());
 LogManager.setLevel(LogManager.levels.debug);
 
@@ -10,7 +11,8 @@ export function configure(aurelia) {
     .defaultResources()
     .router()
     .eventAggregator()
-    .plugin('aurelia-breeze');
+    .plugin('aurelia-breeze')
+    .plugin('aurelia-converters');
 
   aurelia.start().then(a => a.setRoot('app', document.body));
 }

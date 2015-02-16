@@ -11,6 +11,7 @@ System.config({
   "map": {
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.9.3",
     "aurelia-breeze": "github:jdanyow/aurelia-breeze@master",
+    "aurelia-converters": "github:jdanyow/aurelia-converters@master",
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.4.2",
     "aurelia-framework": "github:aurelia/framework@0.8.6",
     "aurelia-http-client": "github:aurelia/http-client@0.5.2",
@@ -18,6 +19,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.2",
     "breeze": "npm:breeze-client@1.5.4",
     "font-awesome": "npm:font-awesome@4.3.0",
+    "moment": "npm:moment@2.9.0",
     "vague-time": "npm:vague-time@1.2.0",
     "github:aurelia/binding@0.3.4": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.4.2",
@@ -107,6 +109,10 @@ System.config({
       "aurelia-binding": "github:aurelia/binding@0.3.4",
       "aurelia-http-client": "github:aurelia/http-client@0.5.2",
       "breeze": "npm:breeze-client@1.5.4"
+    },
+    "github:jdanyow/aurelia-converters@master": {
+      "moment": "npm:moment@2.9.0",
+      "numeral": "npm:numeral@1.5.3"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -203,6 +209,12 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:moment@2.9.0": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:numeral@1.5.3": {
+      "fs": "github:jspm/nodelibs-fs@0.1.1"
     },
     "npm:os-browserify@0.1.2": {
       "os": "github:jspm/nodelibs-os@0.1.0"

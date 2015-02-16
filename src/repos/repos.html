@@ -1,30 +1,29 @@
 <template>
-  <import from='../fuzzy'></import>
-
-	<div class="container">
+  <div class="container">
     <div class="row">
 
       <div class="col-sm-5">
         <div class="list-group">
-          <a repeat.for="repo of aureliaRepos.repos"
+          <a repeat.for="repo of aureliaRepos.repos | sort:'stargazers_count':'number':'descending'"
              href.bind="'#repos/' + repo.name"
              class="list-group-item">
               <span class="badge">
                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                ${repo.stargazers_count}
-              </span>              
+                ${repo.stargazers_count | number}
+              </span>
               <!--<span class="badge">
                 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                 ${repo.watchers_count}
               </span>-->
               <strong>${repo.name}</strong>
-              <p><small>${repo.description}<br/><span class="text-muted">Last Updated:  ${repo.updated_at | fuzzy }</span></small></p>
+              <p><small>${repo.description}<br/><span class="text-muted">Last Updated:  ${repo.updated_at | relative }</span></small></p>
+              <!-- <p><small>${repo.description}<br/><span class="text-muted">Last Updated:  ${repo.updated_at | date:'MMMM Do YYYY, h:mm:ss a' }</span></small></p> -->
           </a>
         </div>
       </div>
 
       <router-view class="col-sm-7"></router-view>
-   
+
     </div>
 	</div>
 </template>

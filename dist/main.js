@@ -5,7 +5,7 @@ System.register(["aurelia-framework", "aurelia-logging-console"], function (_exp
   _export("configure", configure);
 
   function configure(aurelia) {
-    aurelia.use.defaultBindingLanguage().defaultResources().router().eventAggregator().plugin("aurelia-breeze");
+    aurelia.use.defaultBindingLanguage().defaultResources().router().eventAggregator().plugin("aurelia-breeze").plugin("aurelia-converters");
 
     aurelia.start().then(function (a) {
       return a.setRoot("app", document.body);
@@ -18,6 +18,8 @@ System.register(["aurelia-framework", "aurelia-logging-console"], function (_exp
       ConsoleAppender = _aureliaLoggingConsole.ConsoleAppender;
     }],
     execute: function () {
+
+
       LogManager.addAppender(new ConsoleAppender());
       LogManager.setLevel(LogManager.levels.debug);
     }

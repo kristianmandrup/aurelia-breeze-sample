@@ -49,6 +49,7 @@
     "dependencies": {
       "aurelia-bootstrapper": "^0.9.1",
       "aurelia-breeze": "master",
+      "aurelia-converters": "github:jdanyow/aurelia-converters@master",
       "aurelia-dependency-injection": "^0.4.1",
       "aurelia-framework": "^0.8.4",
       "aurelia-http-client": "^0.5.0",
@@ -56,6 +57,7 @@
       "bootstrap": "^3.3.1",
       "breeze": "^1.5.4",
       "font-awesome": "^4.3.0",
+      "moment": "npm:moment@^2.9.0",
       "vague-time": "npm:vague-time@^1.2.0"
     }
   }
